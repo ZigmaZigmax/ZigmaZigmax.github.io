@@ -24,7 +24,7 @@
 		   for(var i5;i5<country.subCountryList.length;i5++) {
 	         var subCountry = country.subCountryList[i5];
 	    %>
-            <span class="<%=country.countryName%>'>-</span><ul><li><input type="checkbox" /><%=subCountry.subCountryName%></li></ul>
+        <span class="<%=country.countryName%>">-</span><ul><li><input type="checkbox" /><%=subCountry.subCountryName%></li></ul>
 		<script>
 		(function(){
            $(document).on("click", "input ~ span.<%=country.countryName%>:first" , function(e) {
@@ -37,6 +37,7 @@
               }})
            });
 		})();
+		</script>
 		<%
             }
         }
