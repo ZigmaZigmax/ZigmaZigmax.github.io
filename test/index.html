@@ -34,7 +34,7 @@ $(document).ready(function(){
 			  }]
 	};
 	
-	var html = new EJS({url: "temmplate.ejs"}).render(json:json);
+	var html = new EJS({url: "temmplate.ejs"}).render({json:json});
 	$('#regionContent ol').html(html);
 });
 </script>
