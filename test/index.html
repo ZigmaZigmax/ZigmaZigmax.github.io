@@ -1,0 +1,40 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="ejs_production.js"></script>
+<style>
+li,
+ol {
+  list-style: none;
+}
+</style>
+<div id="regionContent">
+  <ol></ol>
+</div>
+<script>
+$(document).ready(function(){
+	var json = {
+			  "Asia": [{
+			    "regionList": [{
+			      "regionName": "Eastern Asia",
+			      "Countrylist": [{
+			        "countryName": "China",
+			        "subCountryList": [{
+			          "subCountryName": "Southern China"
+			        }]
+			      }, {
+			        "countryName": "Hong Kong"
+			      }]
+			    }, {
+			      "regionName": "Southern Asia",
+			      "Countrylist": [{
+			        "countryName": "India"
+			      }, {
+			        "countryName": "Pakistan"
+			      }]
+			    }]
+			  }]
+	};
+	
+	var html = new EJS({url: "temmplate.ejs"}).render(json:json);
+	$('#regionContent ol').html(html);
+});
+</script>
